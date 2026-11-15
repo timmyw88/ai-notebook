@@ -1,0 +1,25 @@
+{
+  "title": "AI Notebook",
+  "tagline": "Notes, articles and prompts about AI.",
+  "author": "Your Name",
+  "logo": "",
+  "favicon": "/favicon.svg",
+  "postsPerPage": 10,
+  "social": {
+    "twitter": "",
+    "github": "",
+    "linkedin": "",
+    "youtube": "",
+    "website": ""
+  },
+  "categories": {
+    "prompting": {
+      "name": "Prompting",
+      "description": "Prompts that work, and why."
+    },
+    "notes": {
+      "name": "Notes",
+      "description": "Short notes on things I am learning."
+    }
+  }
+}

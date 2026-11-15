@@ -1,0 +1,42 @@
+# Optional: lets you write posts in the browser with Pages CMS (https://pagescms.org),
+# a free editor that saves straight to this GitHub repository. Not required: you can
+# also edit the Markdown files directly on GitHub or in VS Code.
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: content/posts
+    filename: "{primary}.md"
+    view:
+      fields: [title, date, draft]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Publish date, type: date, options: { time: true }, required: true }
+      - { name: draft, label: Draft (not published), type: boolean, default: true }
+      - { name: excerpt, label: Excerpt, type: text }
+      - { name: category, label: Category, type: string }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: featured, label: Featured on home page, type: boolean, default: false }
+      - { name: image, label: Featured image, type: image }
+      - { name: imageAlt, label: Featured image alt text, type: string }
+      - { name: metaTitle, label: SEO title, type: string }
+      - { name: metaDescription, label: SEO description, type: text }
+      - { name: ogImage, label: Social share image, type: image }
+      # Plain Markdown so prompt blocks (```prompt) and YouTube links keep working
+      - { name: body, label: Content (Markdown), type: text }
+
+  - name: about
+    label: About page
+    type: file
+    path: content/about.md
+    fields:
+      - { name: body, label: Content (Markdown), type: text }
