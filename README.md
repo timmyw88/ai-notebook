@@ -42,6 +42,13 @@ Quick start:
 npm run new-post "My first post"
 ```
 
+**Or use the private post editor:** double-click `tools/post-editor.html` to open it in your browser. Fill in the
+details, write in Markdown with toolbar buttons (prompt box, image, YouTube, table…) and a live preview, then click
+**Download .md** (or Ctrl+S) and move the file into `content/posts/`. **Open .md** loads an existing post to edit it.
+The editor works offline and keeps your unfinished post in the browser. It is not part of the website (it's outside
+`src/app` and `public`, so it's never built or deployed) and `tools/` is git-ignored, so it only exists on this
+computer. Back the file up yourself if you need it elsewhere.
+
 A post looks like this:
 
 ````markdown
